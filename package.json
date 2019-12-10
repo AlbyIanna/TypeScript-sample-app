@@ -1,0 +1,26 @@
+{
+  "name": "ts-board-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "dependencies": {
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "concurrently": "^5.0.1",
+    "jest": "^24.9.0",
+    "parcel": "^1.12.4",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "start": "rm -rf ./dist && npm run watch",
+    "watch": "concurrently \"tsc -w --noEmit\" \"parcel index.html --out-dir dist -p 8080\""
+  },
+  "author": "",
+  "license": "ISC"
+}
